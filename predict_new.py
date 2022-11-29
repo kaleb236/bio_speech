@@ -106,6 +106,7 @@ def predict_desease():
     output_df = pd.DataFrame(output)
     output_df['Hastalıklar'] = Hastaliklar
     # print(output_df)
+    print(veriler)
 
     return veriler
 

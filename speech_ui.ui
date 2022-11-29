@@ -28,6 +28,9 @@ background-color: #d3e1f7;
       <height>601</height>
      </rect>
     </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
     <widget class="QWidget" name="question_page">
      <widget class="QFrame" name="questions_frame">
       <property name="geometry">
@@ -46,7 +49,7 @@ border-radius: 45px;
 }</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::Box</enum>
+       <enum>QFrame::NoFrame</enum>
       </property>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
@@ -175,7 +178,379 @@ color: #a5b4c9;</string>
       </layout>
      </widget>
     </widget>
-    <widget class="QWidget" name="answers_page"/>
+    <widget class="QWidget" name="answers_page">
+     <widget class="QFrame" name="answer_frame">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>581</width>
+        <height>571</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame#answer_frame{
+background-color: #eaf4ff;
+border: 0px solid #eaf4ff;
+border-radius: 45px;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QFrame" name="frame">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <property name="leftMargin">
+           <number>80</number>
+          </property>
+          <property name="rightMargin">
+           <number>80</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frame_2">
+            <property name="styleSheet">
+             <string notr="true">QFrame#frame_2{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.5, x2:1, y2:0.5, stop:0.29 #6d97ff, stop:0.30 #d3e1f7);
+border: 0px solid #d3e1f7;
+border-radius: 10px;
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="styleSheet">
+                <string notr="true">font: 22pt &quot;Bahnschrift&quot;;
+letter-spacing: 2px;
+color: #eaf4ff;</string>
+               </property>
+               <property name="text">
+                <string>Bahar nezlesi</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="bahar">
+               <property name="styleSheet">
+                <string notr="true">
+letter-spacing: 2px;
+font: 26pt &quot;Bahnschrift&quot;;
+color: #eaf4ff;</string>
+               </property>
+               <property name="text">
+                <string>%20</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_3">
+            <property name="styleSheet">
+             <string notr="true">QFrame#frame_3{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.5, x2:1, y2:0.5, stop:0.89 #6d97ff, stop:0.90 #d3e1f7);
+border: 0px solid #d3e1f7;
+border-radius: 10px;
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="styleSheet">
+                <string notr="true">font: 22pt &quot;Bahnschrift&quot;;
+letter-spacing: 2px;
+color: #eaf4ff;</string>
+               </property>
+               <property name="text">
+                <string>Bel fıtığı</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="bel">
+               <property name="styleSheet">
+                <string notr="true">
+letter-spacing: 2px;
+font: 26pt &quot;Bahnschrift&quot;;
+color: #eaf4ff;</string>
+               </property>
+               <property name="text">
+                <string>%80</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_4">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="styleSheet">
+                <string notr="true">font: 22pt &quot;Bahnschrift&quot;;
+letter-spacing: 2px;
+color: #eaf4ff;</string>
+               </property>
+               <property name="text">
+                <string>Boyun fıtığı</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="boy">
+               <property name="styleSheet">
+                <string notr="true">font: 22pt &quot;Bahnschrift&quot;;
+letter-spacing: 2px;
+color: #eaf4ff;</string>
+               </property>
+               <property name="text">
+                <string>80%</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_5">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="styleSheet">
+                <string notr="true">font: 22pt &quot;Bahnschrift&quot;;
+letter-spacing: 2px;
+color: #eaf4ff;</string>
+               </property>
+               <property name="text">
+                <string>Enfeksiyon</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="enf">
+               <property name="styleSheet">
+                <string notr="true">font: 22pt &quot;Bahnschrift&quot;;
+letter-spacing: 2px;
+color: #eaf4ff;</string>
+               </property>
+               <property name="text">
+                <string>80%</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_6">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="styleSheet">
+                <string notr="true">font: 22pt &quot;Bahnschrift&quot;;
+letter-spacing: 2px;
+color: #eaf4ff;</string>
+               </property>
+               <property name="text">
+                <string>Covid -19</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="covid">
+               <property name="styleSheet">
+                <string notr="true">font: 22pt &quot;Bahnschrift&quot;;
+letter-spacing: 2px;
+color: #eaf4ff;</string>
+               </property>
+               <property name="text">
+                <string>80%</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_7">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QLabel" name="label_6">
+               <property name="styleSheet">
+                <string notr="true">font: 22pt &quot;Bahnschrift&quot;;
+letter-spacing: 2px;
+color: #eaf4ff;</string>
+               </property>
+               <property name="text">
+                <string>Kanser başlangıcı</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="kanser">
+               <property name="styleSheet">
+                <string notr="true">font: 22pt &quot;Bahnschrift&quot;;
+letter-spacing: 2px;
+color: #eaf4ff;</string>
+               </property>
+               <property name="text">
+                <string>80%</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_8">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="styleSheet">
+                <string notr="true">font: 22pt &quot;Bahnschrift&quot;;
+letter-spacing: 2px;
+color: #eaf4ff;</string>
+               </property>
+               <property name="text">
+                <string>Grip</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="grip">
+               <property name="styleSheet">
+                <string notr="true">font: 22pt &quot;Bahnschrift&quot;;
+letter-spacing: 2px;
+color: #eaf4ff;</string>
+               </property>
+               <property name="text">
+                <string>80%</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_9">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="QLabel" name="label_8">
+               <property name="styleSheet">
+                <string notr="true">font: 22pt &quot;Bahnschrift&quot;;
+letter-spacing: 2px;
+color: #eaf4ff;</string>
+               </property>
+               <property name="text">
+                <string>Obezite</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="obezite">
+               <property name="styleSheet">
+                <string notr="true">font: 22pt &quot;Bahnschrift&quot;;
+letter-spacing: 2px;
+color: #eaf4ff;</string>
+               </property>
+               <property name="text">
+                <string>80%</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
    </widget>
   </widget>
  </widget>

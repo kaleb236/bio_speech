@@ -23,7 +23,7 @@ def grip_korona(grip, korona, tat):
         rnd = rd.uniform(5,56)
         grip = yüzdelik(grip - rnd)
 
-        return grip, korona
+        return grip/100, korona
     else:
         
         korona = korona
@@ -39,7 +39,7 @@ def eklem_ve_fıtık(bölge, eklem, fitik):
         fitik = round(fitik,2)
         eklem = rd.uniform(80,99)
         eklem = round(eklem, 2)
-        return eklem, fitik
+        return eklem/100, fitik/100
     
     else:
         fitik = fitik
@@ -52,7 +52,7 @@ def kanserr(bilinç, kanser,sigara):
 
         kanser = rd.uniform(80,90)
         kasner = round(kanser, 2)
-        return kanser
+        return kanser/100
     else:
        kanser = kanser
 

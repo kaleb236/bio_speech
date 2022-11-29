@@ -20,14 +20,19 @@ class Ui_MainWindow(object):
 "background-color: #d3e1f7;\n"
 "}")
         self.centralwidget.setObjectName("centralwidget")
-        self.questions_frame = QtWidgets.QFrame(self.centralwidget)
-        self.questions_frame.setGeometry(QtCore.QRect(330, 50, 581, 571))
+        self.stackedWidget = QtWidgets.QStackedWidget(self.centralwidget)
+        self.stackedWidget.setGeometry(QtCore.QRect(300, 40, 641, 601))
+        self.stackedWidget.setObjectName("stackedWidget")
+        self.question_page = QtWidgets.QWidget()
+        self.question_page.setObjectName("question_page")
+        self.questions_frame = QtWidgets.QFrame(self.question_page)
+        self.questions_frame.setGeometry(QtCore.QRect(30, 10, 581, 571))
         self.questions_frame.setStyleSheet("QFrame#questions_frame{\n"
 "background-color: #eaf4ff;\n"
 "border: 0px solid #eaf4ff;\n"
 "border-radius: 45px;\n"
 "}")
-        self.questions_frame.setFrameShape(QtWidgets.QFrame.Box)
+        self.questions_frame.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.questions_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.questions_frame.setObjectName("questions_frame")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.questions_frame)
@@ -69,14 +74,227 @@ class Ui_MainWindow(object):
         self.record_label.setText("")
         self.record_label.setObjectName("record_label")
         self.verticalLayout.addWidget(self.record_label, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
+        self.stackedWidget.addWidget(self.question_page)
+        self.answers_page = QtWidgets.QWidget()
+        self.answers_page.setObjectName("answers_page")
+        self.answer_frame = QtWidgets.QFrame(self.answers_page)
+        self.answer_frame.setGeometry(QtCore.QRect(30, 10, 581, 571))
+        self.answer_frame.setStyleSheet("QFrame#answer_frame{\n"
+"background-color: #eaf4ff;\n"
+"border: 0px solid #eaf4ff;\n"
+"border-radius: 45px;\n"
+"}")
+        self.answer_frame.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.answer_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.answer_frame.setObjectName("answer_frame")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.answer_frame)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.frame = QtWidgets.QFrame(self.answer_frame)
+        self.frame.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setObjectName("frame")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.frame)
+        self.verticalLayout_4.setContentsMargins(80, -1, 80, -1)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.frame_2 = QtWidgets.QFrame(self.frame)
+        self.frame_2.setStyleSheet("QFrame#frame_2{\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:0.5, x2:1, y2:0.5, stop:0.29 #6d97ff, stop:0.30 #d3e1f7);\n"
+"border: 0px solid #d3e1f7;\n"
+"border-radius: 10px;\n"
+"}")
+        self.frame_2.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.frame_2)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.label = QtWidgets.QLabel(self.frame_2)
+        self.label.setStyleSheet("font: 22pt \"Bahnschrift\";\n"
+"letter-spacing: 2px;\n"
+"color: #eaf4ff;")
+        self.label.setObjectName("label")
+        self.horizontalLayout.addWidget(self.label)
+        self.bahar = QtWidgets.QLabel(self.frame_2)
+        self.bahar.setStyleSheet("\n"
+"letter-spacing: 2px;\n"
+"font: 26pt \"Bahnschrift\";\n"
+"color: #eaf4ff;")
+        self.bahar.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.bahar.setObjectName("bahar")
+        self.horizontalLayout.addWidget(self.bahar)
+        self.verticalLayout_4.addWidget(self.frame_2)
+        self.frame_3 = QtWidgets.QFrame(self.frame)
+        self.frame_3.setStyleSheet("QFrame#frame_3{\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:0.5, x2:1, y2:0.5, stop:0.89 #6d97ff, stop:0.90 #d3e1f7);\n"
+"border: 0px solid #d3e1f7;\n"
+"border-radius: 10px;\n"
+"}")
+        self.frame_3.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_3.setObjectName("frame_3")
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_3)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.label_2 = QtWidgets.QLabel(self.frame_3)
+        self.label_2.setStyleSheet("font: 22pt \"Bahnschrift\";\n"
+"letter-spacing: 2px;\n"
+"color: #eaf4ff;")
+        self.label_2.setObjectName("label_2")
+        self.horizontalLayout_2.addWidget(self.label_2)
+        self.bel = QtWidgets.QLabel(self.frame_3)
+        self.bel.setStyleSheet("\n"
+"letter-spacing: 2px;\n"
+"font: 26pt \"Bahnschrift\";\n"
+"color: #eaf4ff;")
+        self.bel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.bel.setObjectName("bel")
+        self.horizontalLayout_2.addWidget(self.bel)
+        self.verticalLayout_4.addWidget(self.frame_3)
+        self.frame_4 = QtWidgets.QFrame(self.frame)
+        self.frame_4.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_4.setObjectName("frame_4")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.frame_4)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.label_3 = QtWidgets.QLabel(self.frame_4)
+        self.label_3.setStyleSheet("font: 22pt \"Bahnschrift\";\n"
+"letter-spacing: 2px;\n"
+"color: #eaf4ff;")
+        self.label_3.setObjectName("label_3")
+        self.horizontalLayout_3.addWidget(self.label_3)
+        self.boy = QtWidgets.QLabel(self.frame_4)
+        self.boy.setStyleSheet("font: 22pt \"Bahnschrift\";\n"
+"letter-spacing: 2px;\n"
+"color: #eaf4ff;")
+        self.boy.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.boy.setObjectName("boy")
+        self.horizontalLayout_3.addWidget(self.boy)
+        self.verticalLayout_4.addWidget(self.frame_4)
+        self.frame_5 = QtWidgets.QFrame(self.frame)
+        self.frame_5.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_5.setObjectName("frame_5")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.frame_5)
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.label_4 = QtWidgets.QLabel(self.frame_5)
+        self.label_4.setStyleSheet("font: 22pt \"Bahnschrift\";\n"
+"letter-spacing: 2px;\n"
+"color: #eaf4ff;")
+        self.label_4.setObjectName("label_4")
+        self.horizontalLayout_4.addWidget(self.label_4)
+        self.enf = QtWidgets.QLabel(self.frame_5)
+        self.enf.setStyleSheet("font: 22pt \"Bahnschrift\";\n"
+"letter-spacing: 2px;\n"
+"color: #eaf4ff;")
+        self.enf.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.enf.setObjectName("enf")
+        self.horizontalLayout_4.addWidget(self.enf)
+        self.verticalLayout_4.addWidget(self.frame_5)
+        self.frame_6 = QtWidgets.QFrame(self.frame)
+        self.frame_6.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_6.setObjectName("frame_6")
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.frame_6)
+        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
+        self.label_5 = QtWidgets.QLabel(self.frame_6)
+        self.label_5.setStyleSheet("font: 22pt \"Bahnschrift\";\n"
+"letter-spacing: 2px;\n"
+"color: #eaf4ff;")
+        self.label_5.setObjectName("label_5")
+        self.horizontalLayout_5.addWidget(self.label_5)
+        self.covid = QtWidgets.QLabel(self.frame_6)
+        self.covid.setStyleSheet("font: 22pt \"Bahnschrift\";\n"
+"letter-spacing: 2px;\n"
+"color: #eaf4ff;")
+        self.covid.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.covid.setObjectName("covid")
+        self.horizontalLayout_5.addWidget(self.covid)
+        self.verticalLayout_4.addWidget(self.frame_6)
+        self.frame_7 = QtWidgets.QFrame(self.frame)
+        self.frame_7.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_7.setObjectName("frame_7")
+        self.horizontalLayout_6 = QtWidgets.QHBoxLayout(self.frame_7)
+        self.horizontalLayout_6.setObjectName("horizontalLayout_6")
+        self.label_6 = QtWidgets.QLabel(self.frame_7)
+        self.label_6.setStyleSheet("font: 22pt \"Bahnschrift\";\n"
+"letter-spacing: 2px;\n"
+"color: #eaf4ff;")
+        self.label_6.setObjectName("label_6")
+        self.horizontalLayout_6.addWidget(self.label_6)
+        self.kanser = QtWidgets.QLabel(self.frame_7)
+        self.kanser.setStyleSheet("font: 22pt \"Bahnschrift\";\n"
+"letter-spacing: 2px;\n"
+"color: #eaf4ff;")
+        self.kanser.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.kanser.setObjectName("kanser")
+        self.horizontalLayout_6.addWidget(self.kanser)
+        self.verticalLayout_4.addWidget(self.frame_7)
+        self.frame_8 = QtWidgets.QFrame(self.frame)
+        self.frame_8.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame_8.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_8.setObjectName("frame_8")
+        self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.frame_8)
+        self.horizontalLayout_7.setObjectName("horizontalLayout_7")
+        self.label_7 = QtWidgets.QLabel(self.frame_8)
+        self.label_7.setStyleSheet("font: 22pt \"Bahnschrift\";\n"
+"letter-spacing: 2px;\n"
+"color: #eaf4ff;")
+        self.label_7.setObjectName("label_7")
+        self.horizontalLayout_7.addWidget(self.label_7)
+        self.grip = QtWidgets.QLabel(self.frame_8)
+        self.grip.setStyleSheet("font: 22pt \"Bahnschrift\";\n"
+"letter-spacing: 2px;\n"
+"color: #eaf4ff;")
+        self.grip.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.grip.setObjectName("grip")
+        self.horizontalLayout_7.addWidget(self.grip)
+        self.verticalLayout_4.addWidget(self.frame_8)
+        self.frame_9 = QtWidgets.QFrame(self.frame)
+        self.frame_9.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame_9.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_9.setObjectName("frame_9")
+        self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.frame_9)
+        self.horizontalLayout_8.setObjectName("horizontalLayout_8")
+        self.label_8 = QtWidgets.QLabel(self.frame_9)
+        self.label_8.setStyleSheet("font: 22pt \"Bahnschrift\";\n"
+"letter-spacing: 2px;\n"
+"color: #eaf4ff;")
+        self.label_8.setObjectName("label_8")
+        self.horizontalLayout_8.addWidget(self.label_8)
+        self.obezite = QtWidgets.QLabel(self.frame_9)
+        self.obezite.setStyleSheet("font: 22pt \"Bahnschrift\";\n"
+"letter-spacing: 2px;\n"
+"color: #eaf4ff;")
+        self.obezite.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.obezite.setObjectName("obezite")
+        self.horizontalLayout_8.addWidget(self.obezite)
+        self.verticalLayout_4.addWidget(self.frame_9)
+        self.verticalLayout_3.addWidget(self.frame)
+        self.stackedWidget.addWidget(self.answers_page)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
+        self.stackedWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.label.setText(_translate("MainWindow", "Bahar nezlesi"))
+        self.bahar.setText(_translate("MainWindow", "%20"))
+        self.label_2.setText(_translate("MainWindow", "Bel fıtığı"))
+        self.bel.setText(_translate("MainWindow", "%80"))
+        self.label_3.setText(_translate("MainWindow", "Boyun fıtığı"))
+        self.boy.setText(_translate("MainWindow", "80%"))
+        self.label_4.setText(_translate("MainWindow", "Enfeksiyon"))
+        self.enf.setText(_translate("MainWindow", "80%"))
+        self.label_5.setText(_translate("MainWindow", "Covid -19"))
+        self.covid.setText(_translate("MainWindow", "80%"))
+        self.label_6.setText(_translate("MainWindow", "Kanser başlangıcı"))
+        self.kanser.setText(_translate("MainWindow", "80%"))
+        self.label_7.setText(_translate("MainWindow", "Grip"))
+        self.grip.setText(_translate("MainWindow", "80%"))
+        self.label_8.setText(_translate("MainWindow", "Obezite"))
+        self.obezite.setText(_translate("MainWindow", "80%"))
 
 
 if __name__ == "__main__":

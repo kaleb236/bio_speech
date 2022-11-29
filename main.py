@@ -51,6 +51,22 @@ class ui_windows(QMainWindow):
 
         self.movie = QMovie('resources/rec.gif')
         self.ui.record_label.setMovie(self.movie)
+        # self.ui.stackedWidget.setCurrentIndex(1)
+        # self.predicted = [0.0001, 0.01, 0.01, 0.01, 0.99, 0.01, 0.008027299613902613, 0.01]
+        self.perc_count = 0.0
+        self.frame_index = 1
+        # self.animate_results()
+
+        for i in self.ui.frame.children():
+            if i.isWidgetType():
+                i.setStyleSheet('''
+                QFrame#{frame_name}{
+                background-color: #d3e1f7;
+                border: 0px solid #d3e1f7;
+                border-radius: 10px;
+                }
+                '''.replace('{frame_name}', i.objectName()))
+        
 
         self.datas = {
             'sicaklik': '36.3'
@@ -221,8 +237,31 @@ class ui_windows(QMainWindow):
         self.predict_thread.start()
     
     def results(self, value):
+        self.predicted = value
+        self.animate_results()
+        self.ui.stackedWidget.setCurrentIndex(1)
         print(value)
+    
+    def animate_results(self):
+        if self.frame_index <= len(self.predicted):
+            pers = self.predicted[self.frame_index - 1]
+            frames = self.ui.frame.children()
+            if self.frame_index < len(frames):
+                frames[self.frame_index].setStyleSheet('''
+                QFrame#{frame_name}{
+                background-color: qlineargradient(spread:pad, x1:0, y1:0.5, x2:1, y2:0.5, stop:{STOP_2} #6d97ff, stop:{STOP_1} #d3e1f7);
+                border: 0px solid #d3e1f7;
+                border-radius: 10px;
+                }
+                '''.replace('{frame_name}', frames[self.frame_index].objectName()).replace('{STOP_1}', str(self.perc_count)).replace('{STOP_2}', str(self.perc_count - 0.01)))
 
+                frames[self.frame_index].children()[2].setText(f'%{round((self.perc_count * 100), 1)}')
+
+                QTimer.singleShot(10, self.animate_results)
+                if self.perc_count >= pers:
+                    self.frame_index += 1
+                    self.perc_count = 0.0
+                self.perc_count += 0.01
 
 
 if __name__ == "__main__":
